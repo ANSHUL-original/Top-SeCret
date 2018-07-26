@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+{% load crispy_forms_tags %}
+<head>
+	<title>register</title>
+	<style type="text/css">
+		
+		body {
+		    font-family: Arial, Helvetica, sans-serif;
+		    background-image:url("img-1.jpg");
+		}
+
+		/* Style the header */
+		.right {
+			padding-right:15px;
+			background-color:lightgreen; 
+			margin-left:1400px;
+		}
+
+		.right_header {
+			color:blue;
+		}
+
+		header {
+		    background-color: #FFD700;
+		    padding: 15px;
+		    text-align: center;
+		    font-size: 35px;
+		    color:brown;
+		}
+
+		footer {
+		    background-color: #777;
+		    padding: 10px;
+		    text-align: center;
+		    color: white;
+		}
+	</style>
+</head>
+<body>
+	<header>
+	  <h2>Rajasthan Tourism</h2>
+	</header>
+	<div class="right_header right">
+		<h1>register page</h1>
+		<form method="POST" action="">{% csrf_token %}
+			{{ form|crispy }}
+			<input type="submit" name="submit">
+		</form>
+	</div>
+	<footer>
+		<h2>this site is created by team Top-SeCret</h2>
+	</footer>
+
+</body>
+</html>

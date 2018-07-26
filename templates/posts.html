@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<header>
+		<title>post title</title>
+	</header>
+	<h3>posts</h3>
+	{% for obj in obj_list %}
+		<div style="text-align:center;color:blue;padding:10px">
+			<p>{{ obj.id }}</p> 
+			<a href="/single/{{ obj.id }}"><h4>{{ obj.name }}</h4></a>	
+		
+			<h5>{{ obj.email }}</h5>
+			<h6>{{ obj.phone }}</h6>
+			<h6>{{ obj.profession }}</h6>
+			<br><br><br><br>
+		</div>
+	{% endfor %}	
+	
+{% endblock content %}

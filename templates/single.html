@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+	<header>
+		<title>single title</title>
+	</header>
+	<h2>single page {{ instance.id }}</h3>
+
+	<p>{{ instance.name }}</p>
+	<p>{{ instance.email }}</p>
+	<p>{{ instance.phone }}</p>
+	<p>{{ instance.profession }}</p>
+
+	<a href="/edit/{{ instance.id }}">Edit</a>
+	<a href="/delete/{{ instance.id }}">Delete</a>
+
+	<form method="POST" action="">{% csrf_token %}
+		{{ form|crispy }}
+		<input type="submit" name="submit">
+	</form>
+	
+{% endblock content %}

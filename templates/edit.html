@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+	<header>
+		<title>single title</title>
+	</header>
+	<h3>EDIT page {{ instance.id }}</h3>
+
+	<form method="POST" action="">{% csrf_token %}
+		{{ form|crispy }}
+		<input type="submit" name="submit">
+	</form>
+	
+{% endblock content %}
